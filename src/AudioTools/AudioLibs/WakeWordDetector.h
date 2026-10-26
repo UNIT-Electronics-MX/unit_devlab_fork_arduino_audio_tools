@@ -55,7 +55,7 @@ struct FrequencyFrame {
  * - Templates are captured live via startRecording()/stopRecording(), no
  *   offline tooling or training pipeline needed.
  * - Verified to fire correctly for a tone matching its template and to stay
- *   silent for a clearly different tone (tests-cmake/stt/stt_test.cpp).
+ *   silent for a clearly different tone (extras/tests-cmake/stt/stt_test.cpp).
  * - write() re-asserts the FFT callback wiring (fft.config().ref/callback)
  *   on every call, so it's robust to the common pattern of calling
  *   fft.begin(fft.defaultConfig()) *after* constructing the detector --

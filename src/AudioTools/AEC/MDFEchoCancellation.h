@@ -66,7 +66,7 @@ using echo_uint32_t = uint32_t;
  * representation for sample/spectrum arrays (word16_t/word32_t) and
  * wide-dynamic-range control state (float_t). This is the default, and the
  * one that has been verified to converge (see test_mdf_converges in
- * tests-cmake/stt/stt_test.cpp) -- prefer it unless you specifically need
+ * extras/tests-cmake/stt/stt_test.cpp) -- prefer it unless you specifically need
  * to avoid hardware floating-point instructions (e.g. no FPU).
  */
 struct MDFFloat {
@@ -81,7 +81,7 @@ struct MDFFloat {
  * mantissa/exponent arithmetic instead of native float instructions --
  * useful on microcontrollers without an FPU. soft_float_t's arithmetic is
  * verified against native float directly (see the soft_float_t tests in
- * tests-cmake/stt/stt_test.cpp), and MDFEchoCancellation<int16_t, MDFFixedPoint> is
+ * extras/tests-cmake/stt/stt_test.cpp), and MDFEchoCancellation<int16_t, MDFFixedPoint> is
  * smoke-tested to run without crashing/NaN and to converge similarly to
  * MDFFloat on the same synthetic signal -- but it has not received the
  * same depth of numerical scrutiny as MDFFloat, so treat it as less
@@ -265,7 +265,7 @@ inline void echo_ifft(void* table, T* in, T* out);
  * - Multi-channel (nbMic x nbSpeakers) support built in.
  * - Verified to converge strongly on a synthetic attenuated-echo signal,
  *   for both numeric backends (see test_mdf_converges<MDFFloat> and
- *   test_mdf_converges<MDFFixedPoint> in tests-cmake/stt/stt_test.cpp).
+ *   test_mdf_converges<MDFFixedPoint> in extras/tests-cmake/stt/stt_test.cpp).
  * - The numeric representation used for internal arrays/state is a
  *   template parameter (@tparam SampleType, MDFFloat by default) chosen
  *   when you construct the object, e.g. `MDFEchoCancellation<int16_t, MDFFixedPoint>`
@@ -286,7 +286,7 @@ inline void echo_ifft(void* table, T* in, T* out);
  *   a 0/0 = NaN in the leak estimate, a leftover fixed-point cast that
  *   zeroed the adaptive filter's gradient) to reach its current, tested
  *   state; treat further changes with real caution and re-run
- *   tests-cmake/stt afterwards.
+ *   extras/tests-cmake/stt afterwards.
  *
  * @tparam T The PCM sample type used by capture()/playback() (e.g. int16_t,
  * int32_t). Defaults to int16_t. Must match the sample type of the audio

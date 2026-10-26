@@ -32,7 +32,7 @@ namespace audio_tools {
  * - Verified to actually converge: on a synthetic attenuated-echo signal
  *   (no near-end noise), residual echo energy drops to roughly 1e-7 of the
  *   original within a few hundred frames with the default MDFFloat backend
- *   (see test_mdf_converges in tests-cmake/stt/stt_test.cpp), and to
+ *   (see test_mdf_converges in extras/tests-cmake/stt/stt_test.cpp), and to
  *   roughly 1e-5 with the no-native-float-arithmetic MDFFixedPoint backend
  *   (see @tparam SampleType below).
  *
