@@ -1,5 +1,7 @@
 # Audio Tools
 
+**UNIT DevLab distribution:** The Arduino library name is `DevLab_AudioTools`. Include `<DevLab_AudioTools.h>` to select this distribution when the original library is also installed. The original project is by Phil Schatzmann.
+
 [![Arduino Library](https://img.shields.io/badge/Arduino-Library-blue.svg)](https://www.arduino.cc/reference/en/libraries/)
 [![Zephyr Library](https://img.shields.io/badge/Zephyr-Library-blue.svg)](https://github.com/pschatzmann/arduino-audio-driver)
 [![IDF Component](https://img.shields.io/badge/IDF-Component-blue.svg)](https://github.com/pschatzmann/arduino-audio-tools)
