@@ -2,6 +2,8 @@
 
 **UNIT DevLab distribution:** The Arduino library name is `DevLab_AudioTools`. Include `<DevLab_AudioTools.h>` to select this distribution when the original library is also installed. The original project is by Phil Schatzmann.
 
+Cesar Bautista and Adrián Rabadán are credited for the UNIT DevLab distribution and its DualMCU integration. Adrián participated in the initial DualMCU version.
+
 For codec output, include `<DevLab_I2SCodecStream.h>` to use `I2SCodecStream` from this distribution.
 
 For MP3 playback, use `<DevLab_AudioSourceSD.h>` for SD input and `<DevLab_CodecMP3Helix.h>` for Helix decoding. `<DevLab_AudioSource.h>` provides the base source type and a compatibility macro for its `begin()` return type.
