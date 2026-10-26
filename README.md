@@ -4,6 +4,8 @@
 
 For codec output, include `<DevLab_I2SCodecStream.h>` to use `I2SCodecStream` from this distribution.
 
+For MP3 playback, use `<DevLab_AudioSourceSD.h>` for SD input and `<DevLab_CodecMP3Helix.h>` for Helix decoding. `<DevLab_AudioSource.h>` provides the base source type and a compatibility macro for its `begin()` return type.
+
 [![Arduino Library](https://img.shields.io/badge/Arduino-Library-blue.svg)](https://www.arduino.cc/reference/en/libraries/)
 [![Zephyr Library](https://img.shields.io/badge/Zephyr-Library-blue.svg)](https://github.com/pschatzmann/arduino-audio-driver)
 [![IDF Component](https://img.shields.io/badge/IDF-Component-blue.svg)](https://github.com/pschatzmann/arduino-audio-tools)
